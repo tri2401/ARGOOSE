@@ -1,13 +1,25 @@
 Include a header paragraph specific to your product here. Performance requirements address items such as: how fast specific critical operations must complete; how long it takes to start/stop activities; how long the battery must last; maximum time it must take to set up; etc.
 
-\subsection{Requirement Name}
+\subsection{System will maintain a false positive rate below 15 percent}
 \subsubsection{Description}
-Detailed requirement description...
+When passively detecting drones, the system will not identify incorrectly by pinging the web interface more than 15 percent of the time. False positives will consist of any detection alert that identifies an item in space that is not a drone or drone similar object.
 \subsubsection{Source}
-Source
+Performance Requirement
 \subsubsection{Constraints}
-Detailed description of applicable constraints...
+Degraded performance due to weather effects may impact performance.
 \subsubsection{Standards}
-List of applicable standards
+There are no intrinsic standards to meet this requirement.
 \subsubsection{Priority}
-Priority
+This is a High priority requirement.
+
+\subsection{System shall verify drones with acoustic detection with a subsystem backup}
+\subsubsection{Description}
+After detecting a drone utilizing it's primary acoustic system, the system will utilize a secondary detection system to verify it's possible drone detection. When both systems return a positive result, the web interface will be informed of a drone detected.
+\subsubsection{Source}
+Performance Requirement
+\subsubsection{Constraints}
+Degraded performance due to weather effects may impact performance.
+\subsubsection{Standards}
+There are no intrinsic standards to meet this requirement.
+\subsubsection{Priority}
+This is a Critical requirement.
