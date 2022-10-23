@@ -1,32 +1,47 @@
-Include a header paragraph specific to your product here. Customer requirements are those required features and functions specified for and by the intended audience for this product. This section establishes, clearly and concisely, the "look and feel" of the product, what each potential end-user should expect the product do and/or not do. Each requirement specified in this section is associated with a specific customer need that will be satisfied. In general Customer Requirements are the directly observable features and functions of the product that will be encountered by its users. Requirements specified in this section are created with, and must not be changed without, specific agreement of the intended customer/user/sponsor.
-
-\subsection{Requirement Name}
+\subsection{The system shall show the current location of the device placed}
 \subsubsection{Description}
-A detailed description of the feature/function that satisfies the requirement. For example: \textit{The GUI background will be slate blue. This specific color is required in order to ensure that the GUI matches other similar software products offered by the customer. Slate blue is specified as \#007FFF, using six-digit hexadecimal color specification.} It is acceptable and advisable to include drawings/graphics in the description if it aids understanding of the requirement.
+The system will track the current location using maps and display it through API.
 \subsubsection{Source}
-The source of the requirement (e.g. customer, sponsor, specified team member (by name), federal regulation, local laws, CSE Senior Design project specifications, etc.)
+Customer Requirement
 \subsubsection{Constraints}
-A detailed description of realistic constraints relevant to this requirement. Economic, environmental, social, political, ethical, health \& safety, manufacturability, and sustainability should be discussed as appropriate.
+There is no realistic constraint for this requirement. Our web app should accurately display the location of the tracking devices placed.
 \subsubsection{Standards}
-A detailed description of any specific standards that apply to this requirement (e.g. \textit{NSTM standard xx.xxx.x. color specifications \cite{Rubin2012}}. Standards exist for practically everything (ATC standard fuses, IEEE 802.15.4 embedded wireless, TLS 1.3 encryption, etc.), so be sure that you research and document which ones will be followed in meeting this requirement.
+There are no intrinsic standards to meet this requirement.
 \subsubsection{Priority}
-The priority of this requirement relative to other specified requirements. Use the following priorities:
-\begin{itemize}
-\item Critical (must have or product is a failure)
-\item High (very important to customer acceptance, desirability)
-\item Moderate (should have for proper product functionality);
-\item Low (nice to have, will include if time/resource permits)
-\item Future (not feasible in this version of the product, but should be considered for a future release).
-\end{itemize}
+This is a critical priority for the project.
 
-\subsection{Requirement Name}
+\subsection{The system shall notify the customer if a drone passes by}
 \subsubsection{Description}
-Detailed requirement description...
+The system will give a message alert to the customer and the point at which the drone signal was captured if a drone is detected in the radius of the device.
 \subsubsection{Source}
-Source
+Customer Requirement
 \subsubsection{Constraints}
-Detailed description of applicable constraints...
+The device should be turned on and ready to process the auditory and RF.
 \subsubsection{Standards}
-List of applicable standards
+There are no intrinsic standards to meet this requirement.
 \subsubsection{Priority}
-Priority
+This is a high level Priority for the project.
+
+\subsection{The system shall show the path in the web application in which the drone travels}
+\subsubsection{Description}
+The system marks the path on the maps along which the drone passes by in the radius of the device.
+\subsubsection{Source}
+Customer Requirement
+\subsubsection{Constraints}
+The path will only be visible temporarily.
+\subsubsection{Standards}
+There are no intrinsic standards to meet this requirement.
+\subsubsection{Priority}
+This is a low level Priority for the project.
+
+\subsection{The system shall categorize the data input from the sensors into potential drones and non drone objects.}
+\subsubsection{Description}
+The system will use machine learning concepts for this categorization.
+\subsubsection{Source}
+Customer Requirement
+\subsubsection{Constraints}
+The sensors should be placed in an open area without any significant disturbances.
+\subsubsection{Standards}
+There are no intrinsic standards to meet this requirement.
+\subsubsection{Priority}
+This is a critical level Priority for the project.
