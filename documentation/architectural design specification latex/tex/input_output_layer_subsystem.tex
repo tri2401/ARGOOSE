@@ -1,0 +1,89 @@
+The input output layer acts an interface between the user and the system.  It displays data that is held by the drone database, as well as makes queries to the system.
+
+\subsection{Application Sub-System}
+The application subsystem is the Graphical User Interface that interacts with the user to get user inputs if necessary and sends it to the database in form of a query.
+
+\begin{figure}[h!]
+	\centering
+ 	\includegraphics[width=0.70\textwidth]{images/Application_Subsystem.png}
+ \caption{Data flow of Application Subsystem}
+\end{figure}
+
+\subsubsection{Assumptions}
+For the operation of this subsystem, it is assumed that the user has access to WIFI or some form of internet and a browser to launch the web application.
+
+\subsubsection{Responsibilities}
+This subsystem is responsible for the database interaction with the user. First of all, the data of all the detected drone is displayed to the user then if the user requests for more information on a particular drone then the request is forwarded to the database in form of a query and the database results are displayed. 
+
+\subsubsection{Subsystem Interfaces}
+
+\begin {table}[H]
+\caption {Subsystem interfaces} 
+\begin{center}
+    \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
+    \hline
+    ID & Description & Inputs & Outputs \\ \hline
+    \#I.1 & User Inputs & \pbox{3cm}{Click on particular drone title} & \pbox{3cm}{Query to the database about the drone}  \\ \hline
+     \#I.2 & Query about drone & \pbox{3cm}{The query to the database} & \pbox{3cm}{Results according to the query}  \\ \hline
+    \#O.1 & List of objects & \pbox{3cm}{N/A} & \pbox{3cm}{List of drone and non drone objects}  \\ \hline
+    \end{tabular}
+\end{center}
+\end{table}\subsection{Results Page}
+The results page includes the output of the drones detected in the area which is presented to the user in graphical form. 
+
+
+\begin{figure}[h!]
+	\centering
+ 	\includegraphics[width=0.60\textwidth]{images/results.png}
+ \caption{Results Display Subsystem Diagram}
+\end{figure}
+
+\subsubsection{Assumptions}
+The results page will only be online after the system is turned on.
+
+\subsubsection{Responsibilities}
+The responsibility of the results page is to communicate with the database through the application interface to provide the graphical visualization of the location of the system and any drones detected in the surrounding area. The results page will display the location of the device in the form of circular dot and any detected drones will be shown in triangular shape.
+
+\subsubsection{Results Subsystem Interfaces}
+
+\begin {table}[H]
+\caption {Results interfaces} 
+\begin{center}
+    \begin{tabular}{ | p{1cm} | p{5cm} | p{4cm} | p{4cm} |}
+    \hline
+    ID & Description & Inputs & Outputs \\ \hline
+    \#U3 & Communication with application & \pbox{4cm}{detected drones and system location data from the database} & \pbox{4cm}{Graphical view of the detected drones and location of the system}  \\ \hline
+   
+    \end{tabular}
+\end{center}
+\end{table}
+
+\subsection{User Inputs}
+The User Inputs page includes the input that can be taken from the user. Here, the user can select a detected drone and verify that it is a false positive. Also, user can select an individual drone and the system will actively track the selected drone in as close to real time as possible.
+
+
+\begin{figure}[h!]
+	\centering
+ 	\includegraphics[width=0.60\textwidth]{images/userInputs.png}
+ \caption{User Inputs subsystem diagram}
+\end{figure}
+
+\subsubsection{Assumptions}
+The user can only select one drone at a time for active detection.
+
+\subsubsection{Responsibilities}
+The responsibility of the User Inputs is to provide a user interface to the user where they can select a detected drone and verify that it is a false positive. Also, the user can select an individual drone and the system will actively track the selected drone in as close to real time as possible.
+
+\subsubsection{User Inputs Subsystem Interfaces}
+
+\begin {table}[H]
+\caption {User Inputs Subsystem interfaces} 
+\begin{center}
+    \begin{tabular}{ | p{1cm} | p{5cm} | p{5cm} | p{5cm} |}
+    \hline
+    ID & Description & Inputs & Outputs \\ \hline
+    \#U201 & Single Drone Active Tracking & \pbox{5cm}{Select input from the user} & \pbox{5cm}{Selected Drone highlighted and actively tracked}  \\ \hline
+    \#U202 & False Positive in detected Drones  & \pbox{5cm}{Select input from the user} & \pbox{5cm}{The selected object will not be further tracked}  \\ \hline
+    \end{tabular}
+\end{center}
+\end{table}
