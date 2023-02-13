@@ -1,0 +1,11 @@
+#Requirements download
+pip install -r requirements.txt
+
+Check cuda version using: nvcc -V
+Download compatible version of PyTorch through commands found here: https://pytorch.org/get-started/previous-versions/
+
+Train command: python train.py --workers 1 --device 0 --batch-size 8 --img 640 640 --epochs 100 --data data/drone_data.yaml --hyp data/hyp.scratch.custom.yaml --cfg cfg/training/yolov7_drone.yaml --name drone --weights yolov7.pt
+
+Copy "best.pt" to main dir from ./runs/train/drone/weights/ (in my case I renamed it to "droned.pt")
+
+Detect command: python detect.py --weights drone_trained.pt  --conf 0.5 --img-size 640  --source drone.jpg --view-img --no-trace
